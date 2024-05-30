@@ -64,11 +64,17 @@
         }
         div#main-content-bottom {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             padding: 1rem;
             gap: 5rem;
             background: var(--secondary-color);
             align-items: center;
+        }
+        @media screen and (min-width: 820px) {
+            div#main-content-bottom {
+                flex-direction: row;
+            }
         }
         div#main-content-data-list {
             display: flex;

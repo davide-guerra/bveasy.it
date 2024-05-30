@@ -1,1 +1,107 @@
-<h1>card giulio cesare</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giulio Cesare</title>
+    <style>
+        :root {
+            --background-color: #000;
+            --main-color: #ff301d;
+            --secondary-color: #000;
+            --text-color: #000; 
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            color: #444;
+        }
+        #grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            overflow: hidden;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+        .grid-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .grid-item img {
+            max-width: 100%;
+            max-height: 15rem;
+			margin-top: 2rem;
+        }
+        div#address {
+            max-width: 70%;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: #444;
+        }
+        a:hover {
+            color: #32421b;
+            text-decoration: none;
+        }
+        @media screen and (min-width: 900px) {
+            body {
+                gap: 3rem;
+            }
+            #grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 100px;
+                overflow: hidden;
+                max-width: 65%;
+            }
+            .grid-item::after {
+                content: "";
+                position: absolute;
+                height: calc(100% + 30px);
+                width: 2px;
+                background: #d15833;
+                right: -49px
+            }
+            .grid-item img {
+                max-width: 100%;
+                max-height: 30rem;
+				margin-top: 0;
+            }
+        }
+		img#img-logo {
+			max-height: 10rem;
+		}
+    </style>
+</head>
+<body>
+    <body>
+        <div id="grid-container">
+            <div class="grid-item">
+                <img id="img-logo" src="images/egheter-logo.png">
+                <p style="font-size: .85rem; margin-top: 2rem; line-height: 1.5; font-style: italic;">Decisi, intensi e profondamente autoctoni. La meravigliosa terra della Valle D’Itria, così chiamata in onore della Madonna Odigitria (dal greco bizantino Oδηγήτρια, colei che indica la direzione e composto dalle parole odos, “via” ed egheter, “guida”) accoglie Cantina Egheter, pensata e voluta nei primi anni Ottanta col preciso intento di esaltare le qualità dei tanti vigneti presenti in questa terra ricolma di storia e passione. Produzioni rigogliose, uniche nelle loro varietà, cresciute su lunghe distese tra Cisternino e Martina Franca e caratterizzate dalla classica terra rossa, frutto della dissoluzione delle rocce calcaree, ricche di residui insolubili composti da ossidi e idrossidi di ferro e di alluminio, o nei pittoreschi terrazzamenti di Locorotondo. Terreni che per la loro ricchezza di potassio e la relativa povertà di sostanze organiche costituiscono un privilegiato substrato per la coltivazione di varietà di uve per vini di pregio, come per il nostro minutolo "Icona", varietà antica e tipica riscoperta a partire dagli anni 80-90, dalle notevoli potenzialità enologiche, ricca di aromi primari che la rende decisamente interessante per produzioni in purezza. Gli stessi presupposti della produzione di vini rossi, di rosati e di spumanti. Una varietà tra le più importanti in Italia in termini quantitativi e, da alcuni anni, sempre più anche qualitativi, nella consapevolezza dell’enorme potenziale vinicolo della regione, dal Negroamaro al Primitivo, dalla Verdeca al Maresco, passando per il Bianco d'Alessano, il Marchione e il Susumaniello.</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/egheter-vino.png">
+            </div>
+        </div>
+        <div id="address">
+            <a href="https://monteserico.it" target="_blank" style="color: #3F5C48;">
+                Monteserico Colture Italiane Srl - Corso Italia 13, 70122 Bari - Italia
+            </a>
+        </div>
+    
+    
+    </body>
+</body>
+</html>

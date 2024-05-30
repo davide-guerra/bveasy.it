@@ -102,6 +102,18 @@ div#main-content-actions a {
 div#main-content-actions a svg {
     height: 1.5rem;
 }
+div#overlay {
+    position: fixed;
+    background: #000000ab;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+div#qr-code-wrapper {
+    display: none;
+}
     </style>
 </head>
 <body>
@@ -153,7 +165,16 @@ div#main-content-actions a svg {
     </div>
     <div id="overlay"></div>
     <div id="qr-code-wrapper">
-qr goes here
+        <img id="qr-code-image" src="">
     </div>
+    <script>
+        document.getElementById("get-qr").addEventListener("click", function(){ 
+            const overlay = document.getElementById("overlay");
+            const qrWrapper = document.getElementById("qr-code-wrapper");
+            const qrImage = document.getElementById("qr-code-image");
+            const currentUrl = window.location.href;
+            alert("Hello World!");
+        });
+    </script>
 </body>
 </html>

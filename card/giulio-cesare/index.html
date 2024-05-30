@@ -11,8 +11,8 @@
         :root {
             --background-color: #000;
             --main-color: #ff301d;
-            --secondary-color: #000;
-            --text-color: #000; 
+            --secondary-color: #fff;
+            --text-color: #444; 
         }
         body {
             margin: 0;
@@ -23,7 +23,8 @@
             flex-direction: column;
             gap: 2rem;
             font-family: 'Montserrat', sans-serif;
-            color: #444;
+            color: var(--text-color);
+            background: var(--background-color);
         }
         
         @media screen and (min-width: 900px) {

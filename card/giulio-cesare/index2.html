@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giulio Cesare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #f7f7f7;
+            --main-color: #19368e;
+            --secondary-color: #fff;
+            --header-color: #fff;
+            --text-color: #444; 
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background: var(--background-color);
+        }
+        
+        @media screen and (min-width: 900px) {
+            body {
+                gap: 3rem;
+            }
+        }
+        div#main-content-wrapper {
+            max-width: 80%;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        @media screen and (min-width: 1200px) {
+            div#main-content-wrapper {
+                width: 50%;
+            }
+        }
+        div#main-content-top {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background: var(--main-color);
+            align-items: center;
+            padding: 1.5rem;
+        }
+        @media screen and (min-width: 820px) {
+            div#main-content-top {
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+        div#main-content-name {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        @media screen and (min-width: 820px) {
+            div#main-content-name {
+                gap: .75rem;
+            }
+        }
+        div#main-content-top img {
+            aspect-ratio: 1;
+            object-fit: cover;
+            max-height: 12rem;
+        }
+        @media screen and (min-width: 820px) {
+            div#main-content-top img {
+                margin-bottom: -3rem;
+            }
+        }
+        div#main-content-name h2, div#main-content-name p {
+            margin: 0;
+            color: var(--header-color);
+        }
+        div#main-content-name h2 {
+            font-size: 1.7rem;
+        }
+        div#main-content-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+            gap: 5rem;
+            background: var(--secondary-color);
+            align-items: center;
+        }
+        @media screen and (min-width: 820px) {
+            div#main-content-bottom {
+                flex-direction: row;
+                padding-top: 3rem;
+            }
+        }
+        div#main-content-data-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        div#main-content-data-list a {
+    display: flex;
+    gap: .5rem;
+    text-decoration: none;
+    color: unset;
+}
+div#main-content-data-list svg {
+    height: 1rem;
+}
+div#main-content-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+div#main-content-actions a {
+    display: flex;
+    gap: .5rem;
+}
+div#main-content-actions a svg {
+    height: 1.5rem;
+}
+div#overlay {
+    position: fixed;
+    background: #000000ab;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+div#qr-code-wrapper {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div id="main-content-wrapper">
+        
+        ciao
+    </div>
+    <div id="overlay"></div>
+    <div id="qr-code-wrapper">
+        <img id="qr-code-image" src="">
+    </div>
+    <script>
+        document.getElementById("get-qr").addEventListener("click", function(){ 
+            const overlay = document.getElementById("overlay");
+            const qrWrapper = document.getElementById("qr-code-wrapper");
+            const qrImage = document.getElementById("qr-code-image");
+            const currentUrl = window.location.href;
+            alert(currentUrl);
+        });
+    </script>
+</body>
+</html>

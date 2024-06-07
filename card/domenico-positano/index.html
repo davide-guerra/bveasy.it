@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giulio Cesare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #f7f7f7;
+            --main-color: #19368e;
+            --secondary-color: #ce0000;
+            --text-color: #fff; 
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background: var(--background-color);
+        }
+        
+        @media screen and (min-width: 900px) {
+            body {
+                gap: 3rem;
+            }
+        }
+        div#main-content-wrapper {
+            width: 80%;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            background: var(--main-color);
+            padding: 2rem;
+            box-sizing: border-box;
+            color: var(--text-color);
+        }
+        @media screen and (min-width: 1200px) {
+            div#main-content-wrapper {
+                width: 50%;
+                padding: 1.5rem;
+            }
+        }
+        @media screen and (min-width: 1400px) {
+            div#main-content-wrapper {
+                width: 40%;
+            }
+        }
+        div#main-content-top {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background: var(--main-color);
+            align-items: center;
+            padding: 1.5rem;
+        }
+        @media screen and (min-width: 820px) {
+            div#main-content-top {
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+        div#top {
+            display: none;
+        }
+        @media screen and (min-width: 1200px) {
+            div#top {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid var(--text-color);
+                margin-bottom: 2rem;
+            }
+        }
+        div#name {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        div#name svg  {
+            fill: var(--text-color);
+            height: 1.5rem;
+        }
+        div#download-big {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        div#download-big svg  {
+            fill: var(--text-color);
+            height: 1.25rem;
+        }
+        div#download-big a {
+            display: flex;
+            align-items: center;
+            gap: .9rem;
+            font-size: .9rem;
+            color: #fff;
+            text-decoration: none;
+        }
+        div#bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        div#image {
+            display: flex;
+            justify-content: center;
+        }
+        div#image img {
+            width: 80%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        @media screen and (min-width: 1200px) {
+            div#bottom {
+                flex-direction: row;
+            }
+            div#image {
+                display: unset;
+                flex-basis: 33%;
+            }
+            div#details {
+                flex-basis: 66%;
+            }
+            div#image img {
+                width: 100%;
+            }
+        }
+        div#details {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        div#name-small {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: .5rem;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        @media screen and (min-width: 1200px) {
+            div#name-small {
+                display: none;
+            }
+        }
+        div#name-small svg {
+            height: 2rem;
+            fill: #fff;
+        }
+        div#profession-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 2rem;
+        }
+        span#profession {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        span#company {
+            font-size: 1rem;
+        }
+        div#contacts-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        div#contacts-wrapper svg {
+            fill: var(--text-color);
+            height: 1rem;
+        }
+        div#contacts-wrapper a {
+            display: flex;
+            gap: .5rem;
+            color: #fff;
+            text-decoration: none;
+        }
+        div#download-small {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--text-color);
+            margin-top: 2rem;
+        }
+        @media screen and (min-width: 1200px){
+            div#download-small {
+                display: none;
+            }
+        }
+        div#download-small a {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        div#download-small svg {
+            fill: var(--text-color);
+            height: 1rem;
+        }
+        div#overlay {
+            position: fixed;
+            background: #000000e0;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            display: none;
+            z-index: 2;
+        }
+        div#overlay.active {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+        div#qr-code-wrapper {
+            display: none;
+        }
+        div#qr-code-wrapper.active {
+            display: block;
+            z-index: 9;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        img#qr-code-image {
+            display: none;
+        }
+        img#qr-code-image.active {
+            display: block;
+        }
+        svg#close-overlay {
+            height: 2.5rem;
+            cursor: pointer;
+            padding: 1rem;
+        }
+        a#power {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            display: flex;
+            align-items: center;
+            gap: .2rem;
+            font-size: .75rem;
+            color: #000;
+            text-decoration: none;
+        }
+        a#power img {
+            width: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-content-wrapper">
+        <div id="top">
+            <div id="name">
+                <svg fill="none" viewBox="0 0 24 24"><circle cx="12" cy="6" r="4"/><path d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5Z"/></svg>
+                <span>DOMENICO POSITANO</span>
+            </div>
+            <div id="download-big">
+                <a href="assets/vcard.vcf" target="_blank" download>
+                    <svg fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 1.25a.75.75 0 0 0-.75.75v10.973l-1.68-1.961a.75.75 0 1 0-1.14.976l3 3.5a.75.75 0 0 0 1.14 0l3-3.5a.75.75 0 1 0-1.14-.976l-1.68 1.96V2a.75.75 0 0 0-.75-.75Z" clip-rule="evenodd"/><path d="M14.25 9v.378a2.249 2.249 0 0 1 2.458 3.586l-3 3.5a2.25 2.25 0 0 1-3.416 0l-3-3.5A2.25 2.25 0 0 1 9.75 9.378V9H8c-2.828 0-4.243 0-5.121.879C2 10.757 2 12.172 2 15v1c0 2.828 0 4.243.879 5.121C3.757 22 5.172 22 8 22h8c2.828 0 4.243 0 5.121-.879C22 20.243 22 18.828 22 16v-1c0-2.828 0-4.243-.879-5.121C20.243 9 18.828 9 16 9h-1.75Z"/></svg>
+                    <span>Download vCard</span>
+                </a>
+                <a class="get-qr" href="javascript:void(0)">
+                    <svg fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16.525 2h.068c.884 0 1.597 0 2.17.055.592.056 1.108.175 1.571.459.47.288.864.682 1.152 1.152.284.463.403.979.46 1.57C22 5.81 22 6.524 22 7.407v.07c0 .58 0 1.064-.037 1.458-.04.412-.124.795-.34 1.147-.21.344-.5.633-.845.844-.351.216-.735.3-1.146.34-.394.037-.879.037-1.46.037h-1.104c-.836 0-1.533 0-2.086-.074-.584-.079-1.111-.251-1.535-.675-.424-.424-.596-.95-.675-1.535-.074-.553-.074-1.25-.074-2.086V5.827c0-.58 0-1.065.037-1.459.04-.411.124-.795.34-1.146.21-.345.5-.634.844-.845.352-.216.735-.3 1.147-.34C15.459 2 15.944 2 16.525 2Zm.824 5.814c-.48 0-.72 0-.889-.12a.652.652 0 0 1-.154-.154c-.12-.17-.12-.41-.12-.889 0-.48 0-.719.12-.888a.652.652 0 0 1 .154-.155c.17-.12.41-.12.889-.12.48 0 .719 0 .888.12.06.043.112.095.155.155.12.169.12.409.12.888 0 .48 0 .72-.12.889a.652.652 0 0 1-.155.154c-.169.12-.409.12-.888.12ZM10.08 2.377c-.35-.216-.734-.3-1.146-.34C8.54 2 8.056 2 7.475 2h-.068c-.884 0-1.597 0-2.17.055-.592.056-1.108.175-1.571.459-.47.288-.864.682-1.152 1.152-.284.463-.403.979-.46 1.57C2 5.81 2 6.524 2 7.407v.07c0 .58 0 1.064.037 1.458.04.412.124.795.34 1.147.21.344.5.633.845.844.351.216.735.3 1.146.34.394.037.878.037 1.46.037h1.104c.836 0 1.533 0 2.086-.074.584-.079 1.111-.251 1.535-.675.424-.424.596-.95.675-1.535.074-.553.074-1.25.074-2.086V5.827c0-.58 0-1.065-.037-1.459-.04-.411-.124-.795-.34-1.146a2.559 2.559 0 0 0-.844-.845ZM5.764 7.694c.169.12.409.12.888.12.48 0 .72 0 .889-.12a.65.65 0 0 0 .154-.154c.12-.17.12-.41.12-.889 0-.48 0-.719-.12-.888a.65.65 0 0 0-.154-.155c-.17-.12-.41-.12-.889-.12-.48 0-.719 0-.888.12a.651.651 0 0 0-.155.155c-.12.169-.12.409-.12.888 0 .48 0 .72.12.889a.65.65 0 0 0 .155.154ZM9.018 12.772c.584.079 1.111.251 1.535.675.424.424.596.95.675 1.535.074.553.074 1.25.074 2.086v1.105c0 .58 0 1.065-.037 1.459-.04.411-.124.795-.34 1.146-.21.345-.5.634-.844.845-.352.216-.735.3-1.147.34C8.54 22 8.056 22 7.475 22h-.068c-.884 0-1.597 0-2.17-.055-.592-.056-1.108-.175-1.571-.459a3.489 3.489 0 0 1-1.152-1.152c-.284-.463-.403-.979-.46-1.57C2 18.19 2 17.477 2 16.593v-.07c0-.58 0-1.065.037-1.458.04-.412.124-.795.34-1.147.21-.344.5-.633.845-.844.351-.216.735-.3 1.146-.34.394-.037.878-.037 1.46-.037h1.104c.836 0 1.533 0 2.086.074Zm-2.367 5.74c-.48 0-.719 0-.888-.12a.652.652 0 0 1-.155-.155c-.12-.169-.12-.409-.12-.888 0-.48 0-.72.12-.889a.652.652 0 0 1 .155-.154c.169-.12.409-.12.888-.12.48 0 .72 0 .889.12.06.043.111.095.154.154.12.17.12.41.12.889 0 .48 0 .719-.12.888a.652.652 0 0 1-.154.155c-.17.12-.41.12-.889.12Z" clip-rule="evenodd"/><path d="M12.698 16.616v.035h1.395c0-.668 0-1.116.036-1.458.033-.33.093-.482.16-.583a1.16 1.16 0 0 1 .32-.321c.102-.067.254-.127.584-.16.342-.035.79-.036 1.458-.036h1.86v-1.395h-1.895c-.623 0-1.143 0-1.564.042-.44.045-.849.143-1.217.389-.28.186-.52.426-.706.706-.246.368-.344.777-.389 1.217-.042.42-.042.94-.042 1.564ZM22 18.535v-.023h-1.395c0 .443 0 .74-.016.97-.016.224-.043.333-.073.405a1.162 1.162 0 0 1-.63.63c-.07.029-.18.056-.404.072-.23.015-.527.016-.97.016h-1.86V22h1.883c.414 0 .759 0 1.042-.02.295-.02.574-.063.844-.175a2.559 2.559 0 0 0 1.384-1.384c.112-.27.156-.549.176-.844.019-.283.019-.628.019-1.042ZM14.093 21.302a.698.698 0 1 1-1.395 0v-2.79h1.395v2.79ZM21.302 12.698a.698.698 0 0 0-.697.697v3.256H22v-3.256a.698.698 0 0 0-.698-.697ZM16.076 16.617c-.076.184-.076.417-.076.883s0 .699.076.883a1 1 0 0 0 .541.54c.184.077.417.077.883.077s.699 0 .883-.076a1 1 0 0 0 .54-.541c.077-.184.077-.417.077-.883s0-.699-.076-.883a1 1 0 0 0-.541-.54C18.199 16 17.966 16 17.5 16s-.699 0-.883.076a1 1 0 0 0-.54.541Z"/></svg>
+                    <span>Download QR</span>
+                </a>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="image">
+                <img src="assets/photo.jpg">
+            </div>
+            <div id="details">
+                <div id="name-small">
+                    <span>DOMENICO POSITANO</span>
+                </div>
+                <div id="profession-wrapper">
+                    <span id="profession">Web designer</span>
+                    <span id="company">BvEasy</span>
+                </div>
+                <div id="contacts-wrapper">
+                    <a id="phone" class="item-contact" href="tel:340 695 2989" target="_blank">
+                        <svg fill="none" viewBox="0 0 24 24"><path d="m15.556 14.548-.455.48s-1.083 1.139-4.038-1.972c-2.955-3.111-1.872-4.25-1.872-4.25l.287-.303c.706-.744.773-1.938.156-2.81L8.374 3.91C7.61 2.83 6.135 2.688 5.26 3.609L3.691 5.26c-.433.457-.723 1.048-.688 1.705.09 1.68.808 5.293 4.812 9.51 4.247 4.47 8.232 4.648 9.861 4.487.516-.05.964-.329 1.325-.709l1.42-1.496c.96-1.01.69-2.74-.538-3.446l-1.91-1.1c-.806-.463-1.787-.327-2.417.336ZM13.26 1.88a.751.751 0 0 1 .861-.62c.025.005.107.02.15.03.085.018.204.048.352.09.297.087.712.23 1.21.458.996.457 2.321 1.256 3.697 2.631 1.376 1.376 2.175 2.702 2.632 3.698.228.498.37.912.457 1.21a5.727 5.727 0 0 1 .113.454l.005.031a.765.765 0 0 1-.617.878.75.75 0 0 1-.86-.617 2.82 2.82 0 0 0-.081-.327 7.395 7.395 0 0 0-.38-1.004c-.39-.85-1.092-2.024-2.33-3.262-1.237-1.238-2.412-1.939-3.262-2.329a7.394 7.394 0 0 0-1.003-.38 5.749 5.749 0 0 0-.318-.08.759.759 0 0 1-.627-.861Z"/><path fill-rule="evenodd" d="M13.486 5.33a.75.75 0 0 1 .927-.516l-.206.721.206-.72h.003l.003.001.008.002.02.006.056.02c.045.016.104.038.177.07.146.062.345.158.59.303.489.29 1.157.77 1.942 1.556.785.785 1.266 1.453 1.556 1.942.145.245.241.444.303.59a2.969 2.969 0 0 1 .09.233l.005.02.003.008v.003l.001.001s0 .002-.72.208l.72-.206a.75.75 0 0 1-1.439.422l-.003-.01a3.67 3.67 0 0 0-.25-.504c-.224-.377-.627-.947-1.327-1.647-.7-.7-1.269-1.102-1.646-1.325a3.662 3.662 0 0 0-.504-.25l-.01-.004a.75.75 0 0 1-.505-.925Z" clip-rule="evenodd"/></svg>
+                        <span>340 695 2989</span>
+                    </a>
+                    <a id="email" class="item-contact" href="mailto:domenico@bveasy.it" target="_blank">
+                        <svg fill="none" viewBox="0 0 24 24"><path d="M10 22h4c3.771 0 5.657 0 6.828-1.171C22 19.657 22 17.77 22 14s0-5.657-1.172-6.828c-.362-.363-.794-.613-1.328-.786v2.773c.003.34.009.911-.236 1.433-.244.522-.686.884-.95 1.1-.026.02-.051.041-.073.06l-1.507 1.255c-.86.718-1.61 1.342-2.284 1.776-.725.466-1.51.812-2.45.812-.94 0-1.724-.346-2.45-.813-.674-.433-1.423-1.057-2.284-1.774l-1.507-1.256a13.705 13.705 0 0 0-.073-.06c-.264-.216-.705-.578-.95-1.1-.244-.522-.24-1.093-.237-1.433l.001-.096V6.385c-.534.173-.966.424-1.328.787C2 8.343 2 10.229 2 14c0 3.771 0 5.657 1.172 6.829C4.343 22 6.229 22 10 22Z"/><path fill-rule="evenodd" d="m6.72 10.6 1.439 1.2c1.837 1.53 2.755 2.295 3.841 2.295 1.086 0 2.005-.765 3.841-2.296l1.44-1.2c.353-.294.53-.442.625-.643.094-.202.094-.432.094-.893V7c0-.32 0-.62-.002-.898-.012-1.771-.098-2.737-.73-3.37C16.536 2 15.358 2 13 2h-2c-2.357 0-3.535 0-4.268.732-.632.633-.72 1.599-.732 3.37-.002.279 0 .577 0 .898v2.063c0 .46 0 .691.095.893.094.201.27.349.625.644ZM9.25 6a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 0 1.5h-4A.75.75 0 0 1 9.25 6Zm1 3a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/></svg>
+                        <span>domenico@bveasy.it</span>
+                    </a>
+                    <a id="map" class="item-contact" href="https://maps.app.goo.gl/VaAwR5q1quyA3w2m6" target="_blank">
+                        <svg fill="none" viewBox="0 0 24 24"><path d="M21 16.83v-5.667c0-1.044 0-1.566-.283-1.959-.229-.317-.596-.486-1.25-.713-.134 1.606-.666 3.247-1.502 4.682-.972 1.672-2.417 3.167-4.268 3.974a4.255 4.255 0 0 1-3.394 0c-1.851-.807-3.296-2.302-4.269-3.974A11.533 11.533 0 0 1 4.7 9.658c-.383-.057-.676-.028-.93.113a1.5 1.5 0 0 0-.28.203C3 10.42 3 11.249 3 12.908v4.93c0 1.043 0 1.565.283 1.958s.778.558 1.768.888l.384.128c1.577.525 2.365.788 3.172.79.243 0 .485-.017.726-.052.798-.115 1.548-.49 3.048-1.24 1.149-.575 1.724-.862 2.334-.995.214-.047.431-.08.65-.098.623-.052 1.25.053 2.507.262 1.273.212 1.91.318 2.375.051.158-.09.298-.209.413-.35.34-.415.34-1.06.34-2.35Z"/><path fill-rule="evenodd" d="M12 2C8.686 2 6 4.552 6 7.7c0 3.124 1.915 6.769 4.903 8.072a2.755 2.755 0 0 0 2.194 0C16.085 14.47 18 10.824 18 7.7 18 4.552 15.314 2 12 2Zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" clip-rule="evenodd"/></svg>
+                        <span>via Aldo Moro 1<br/>70018 Rutigliano (BA)</span>
+                    </a>
+                </div>
+                <div id="download-small">
+                    <a href="assets/vcard.vcf" target="_blank" download>
+                        <svg fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 1.25a.75.75 0 0 0-.75.75v10.973l-1.68-1.961a.75.75 0 1 0-1.14.976l3 3.5a.75.75 0 0 0 1.14 0l3-3.5a.75.75 0 1 0-1.14-.976l-1.68 1.96V2a.75.75 0 0 0-.75-.75Z" clip-rule="evenodd"/><path d="M14.25 9v.378a2.249 2.249 0 0 1 2.458 3.586l-3 3.5a2.25 2.25 0 0 1-3.416 0l-3-3.5A2.25 2.25 0 0 1 9.75 9.378V9H8c-2.828 0-4.243 0-5.121.879C2 10.757 2 12.172 2 15v1c0 2.828 0 4.243.879 5.121C3.757 22 5.172 22 8 22h8c2.828 0 4.243 0 5.121-.879C22 20.243 22 18.828 22 16v-1c0-2.828 0-4.243-.879-5.121C20.243 9 18.828 9 16 9h-1.75Z"/></svg>
+                        <span>Download vCard</span>
+                    </a>
+                    <a class="get-qr" href="javascript:void(0)">
+                        <svg fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16.525 2h.068c.884 0 1.597 0 2.17.055.592.056 1.108.175 1.571.459.47.288.864.682 1.152 1.152.284.463.403.979.46 1.57C22 5.81 22 6.524 22 7.407v.07c0 .58 0 1.064-.037 1.458-.04.412-.124.795-.34 1.147-.21.344-.5.633-.845.844-.351.216-.735.3-1.146.34-.394.037-.879.037-1.46.037h-1.104c-.836 0-1.533 0-2.086-.074-.584-.079-1.111-.251-1.535-.675-.424-.424-.596-.95-.675-1.535-.074-.553-.074-1.25-.074-2.086V5.827c0-.58 0-1.065.037-1.459.04-.411.124-.795.34-1.146.21-.345.5-.634.844-.845.352-.216.735-.3 1.147-.34C15.459 2 15.944 2 16.525 2Zm.824 5.814c-.48 0-.72 0-.889-.12a.652.652 0 0 1-.154-.154c-.12-.17-.12-.41-.12-.889 0-.48 0-.719.12-.888a.652.652 0 0 1 .154-.155c.17-.12.41-.12.889-.12.48 0 .719 0 .888.12.06.043.112.095.155.155.12.169.12.409.12.888 0 .48 0 .72-.12.889a.652.652 0 0 1-.155.154c-.169.12-.409.12-.888.12ZM10.08 2.377c-.35-.216-.734-.3-1.146-.34C8.54 2 8.056 2 7.475 2h-.068c-.884 0-1.597 0-2.17.055-.592.056-1.108.175-1.571.459-.47.288-.864.682-1.152 1.152-.284.463-.403.979-.46 1.57C2 5.81 2 6.524 2 7.407v.07c0 .58 0 1.064.037 1.458.04.412.124.795.34 1.147.21.344.5.633.845.844.351.216.735.3 1.146.34.394.037.878.037 1.46.037h1.104c.836 0 1.533 0 2.086-.074.584-.079 1.111-.251 1.535-.675.424-.424.596-.95.675-1.535.074-.553.074-1.25.074-2.086V5.827c0-.58 0-1.065-.037-1.459-.04-.411-.124-.795-.34-1.146a2.559 2.559 0 0 0-.844-.845ZM5.764 7.694c.169.12.409.12.888.12.48 0 .72 0 .889-.12a.65.65 0 0 0 .154-.154c.12-.17.12-.41.12-.889 0-.48 0-.719-.12-.888a.65.65 0 0 0-.154-.155c-.17-.12-.41-.12-.889-.12-.48 0-.719 0-.888.12a.651.651 0 0 0-.155.155c-.12.169-.12.409-.12.888 0 .48 0 .72.12.889a.65.65 0 0 0 .155.154ZM9.018 12.772c.584.079 1.111.251 1.535.675.424.424.596.95.675 1.535.074.553.074 1.25.074 2.086v1.105c0 .58 0 1.065-.037 1.459-.04.411-.124.795-.34 1.146-.21.345-.5.634-.844.845-.352.216-.735.3-1.147.34C8.54 22 8.056 22 7.475 22h-.068c-.884 0-1.597 0-2.17-.055-.592-.056-1.108-.175-1.571-.459a3.489 3.489 0 0 1-1.152-1.152c-.284-.463-.403-.979-.46-1.57C2 18.19 2 17.477 2 16.593v-.07c0-.58 0-1.065.037-1.458.04-.412.124-.795.34-1.147.21-.344.5-.633.845-.844.351-.216.735-.3 1.146-.34.394-.037.878-.037 1.46-.037h1.104c.836 0 1.533 0 2.086.074Zm-2.367 5.74c-.48 0-.719 0-.888-.12a.652.652 0 0 1-.155-.155c-.12-.169-.12-.409-.12-.888 0-.48 0-.72.12-.889a.652.652 0 0 1 .155-.154c.169-.12.409-.12.888-.12.48 0 .72 0 .889.12.06.043.111.095.154.154.12.17.12.41.12.889 0 .48 0 .719-.12.888a.652.652 0 0 1-.154.155c-.17.12-.41.12-.889.12Z" clip-rule="evenodd"/><path d="M12.698 16.616v.035h1.395c0-.668 0-1.116.036-1.458.033-.33.093-.482.16-.583a1.16 1.16 0 0 1 .32-.321c.102-.067.254-.127.584-.16.342-.035.79-.036 1.458-.036h1.86v-1.395h-1.895c-.623 0-1.143 0-1.564.042-.44.045-.849.143-1.217.389-.28.186-.52.426-.706.706-.246.368-.344.777-.389 1.217-.042.42-.042.94-.042 1.564ZM22 18.535v-.023h-1.395c0 .443 0 .74-.016.97-.016.224-.043.333-.073.405a1.162 1.162 0 0 1-.63.63c-.07.029-.18.056-.404.072-.23.015-.527.016-.97.016h-1.86V22h1.883c.414 0 .759 0 1.042-.02.295-.02.574-.063.844-.175a2.559 2.559 0 0 0 1.384-1.384c.112-.27.156-.549.176-.844.019-.283.019-.628.019-1.042ZM14.093 21.302a.698.698 0 1 1-1.395 0v-2.79h1.395v2.79ZM21.302 12.698a.698.698 0 0 0-.697.697v3.256H22v-3.256a.698.698 0 0 0-.698-.697ZM16.076 16.617c-.076.184-.076.417-.076.883s0 .699.076.883a1 1 0 0 0 .541.54c.184.077.417.077.883.077s.699 0 .883-.076a1 1 0 0 0 .54-.541c.077-.184.077-.417.077-.883s0-.699-.076-.883a1 1 0 0 0-.541-.54C18.199 16 17.966 16 17.5 16s-.699 0-.883.076a1 1 0 0 0-.54.541Z"/></svg>
+                        <span>Download QR</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="close-qr">
+        <svg id="close-overlay" class="close-qr" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+        </svg>
+    </div>
+    <div id="qr-code-wrapper">
+        <img id="qr-code-image" src="">
+    </div>
+    <a id="power" href="https://bveasy.it" target="_blank">
+        <span>powered by</span>
+        <img src="assets/logo.png">
+    </a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.getElementById('overlay');
+            const getQrLinks = document.querySelectorAll('.get-qr');
+            const qrWrapper = document.getElementById("qr-code-wrapper");
+            const qrImage = document.getElementById("qr-code-image");
+            const currentUrl = window.location.href;
+
+            getQrLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Previene il comportamento predefinito del link
+                    overlay.classList.add('active');
+                    qrWrapper.classList.add('active');
+                    let finalUrl = 'https://api.qrserver.com/v1/create-qr-code/?data=' + currentUrl + '&amp;format=svg';
+                    qrImage.src = finalUrl;
+                    qrImage.classList.add('active');
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.getElementById('overlay');
+            const qrWrapper = document.getElementById("qr-code-wrapper");
+            const qrImage = document.getElementById("qr-code-image");
+            const closeQr = document.querySelectorAll('.close-qr')
+
+            closeQr.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Previene il comportamento predefinito del link
+                    overlay.classList.remove('active');
+                    qrWrapper.classList.remove('active');
+                    qrImage.classList.remove('active');
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -251,7 +251,6 @@
             padding: 1rem;
         }
         a#power {
-            position: fixed;
             bottom: 1rem;
             right: 1rem;
             display: flex;
@@ -263,6 +262,11 @@
         }
         a#power img {
             width: 5rem;
+        }
+        @media screen and (min-width: 1200px) {
+            a#power {
+                position: fixed;
+            }
         }
     </style>
 </head>

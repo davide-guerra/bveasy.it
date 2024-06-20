@@ -35,10 +35,28 @@
                 gap: 3rem;
             }
         }
+        img#home-logo {
+            max-width: 70%;
+        }
+        @media screen and (min-width: 820px) {
+            img#home-logo {
+                max-width: 50%;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            img#home-logo {
+                max-width: 30%;
+            }
+        }
+        @media screen and (min-width: 1400px) {
+            img#home-logo {
+                max-width: 20%;
+            }
+        }
     </style>
 </head>
 <body>
-    <img style="max-width: 20%;" src="assets/logo.png">
+    <img id="home-logo" src="assets/logo.png">
     
 </body>
 </html>

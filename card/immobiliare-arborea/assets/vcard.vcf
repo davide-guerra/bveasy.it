@@ -1,13 +1,14 @@
 BEGIN:VCARD
 VERSION:3.0
-FN;CHARSET=UTF-8:Elite Ceramiche
-N;CHARSET=UTF-8:Ceramiche;Elite;;;
-EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:elitearredobagno@libero.it
-TEL;TYPE=CELL:+390804769222
-LABEL;CHARSET=UTF-8;TYPE=WORK:BvEasy
-ADR;CHARSET=UTF-8;TYPE=WORK:;;via dell'Artigianato;Rutigliano;BA;70018;Italy
-ROLE;CHARSET=UTF-8:Arredo bagno e materiali edili
-ORG;CHARSET=UTF-8:Arredo bagno e materiali edili
-URL;type=WORK;CHARSET=UTF-8:https://eliteceramichedarredo.it
+FN;CHARSET=UTF-8:Leonardo Arborea
+N;CHARSET=UTF-8:Arborea;Leonardo;;;
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:info@immobiliarearborea.it
+TEL;TYPE=CELL:+393479231740
+TEL;TYPE=WORK,VOICE:+3908040394702
+LABEL;CHARSET=UTF-8;TYPE=WORK:Gruppo Immobiliare Arborea
+ADR;CHARSET=UTF-8;TYPE=WORK:;;corso Giuseppe Garibaldi 36;Rutigliano;BA;70018;Italy
+ROLE;CHARSET=UTF-8:Gruppo Immobiliare Arborea
+ORG;CHARSET=UTF-8:Gruppo Immobiliare Arborea
+URL;type=WORK;CHARSET=UTF-8:https://immobiliareareborea.it/
 REV:2024-05-30T09:32:50.319Z
 END:VCARD

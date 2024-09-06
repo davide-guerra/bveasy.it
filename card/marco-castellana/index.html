@@ -393,7 +393,7 @@
                     event.preventDefault(); // Previene il comportamento predefinito del link
                     overlay.classList.add('active');
                     qrWrapper.classList.add('active');
-                    let finalUrl = 'https://api.qrserver.com/v1/create-qr-code/?data=' + currentUrl + '&format=svg';
+                    let finalUrl = 'https://api.qrserver.com/v1/create-qr-code/?data=' + currentUrl + '&format=svg&qzone=1';
                     qrImage.src = finalUrl;
                     qrImage.classList.add('active');
                 });

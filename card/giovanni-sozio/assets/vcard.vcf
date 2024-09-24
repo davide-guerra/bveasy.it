@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Giovanni Sozio
+N;CHARSET=UTF-8:Sozio;Giovanni;;;
+TEL;TYPE=CELL:+393486054769
+TEL;TYPE=WORK:+390804771111
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:g.sozio@quifideiussione.it
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:info@quifideiussione.it
+LABEL;CHARSET=UTF-8;TYPE=WORK:Qui Fideiussione
+ADR;CHARSET=UTF-8;TYPE=WORK:;;via Noicattaro km 1;Rutigliano;BA;70018;Italy
+ROLE;CHARSET=UTF-8:Qui Fideiussione
+ORG;CHARSET=UTF-8:Qui Fideiussione
+URL;type=WORK;CHARSET=UTF-8:https://www.quifideiussione.it/
+REV:2024-05-30T09:32:50.319Z
+END:VCARD

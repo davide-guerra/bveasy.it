@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Giuseppe Gallo
+N;CHARSET=UTF-8:Gallo;Giuseppe;;;
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:gg.giuseppegallo@gmail.com
+TEL;TYPE=CELL:+393772273996
+LABEL;CHARSET=UTF-8;TYPE=WORK:Architetto
+ADR;CHARSET=UTF-8;TYPE=WORK:;;via Ottavio Serena 20;Bari;BA;70126;Italy
+ROLE;CHARSET=UTF-8:Architetto
+ORG;CHARSET=UTF-8:Architetto
+URL;type=WORK;CHARSET=UTF-8:https://www.galloarchitettura.it/
+REV:2024-05-30T09:32:50.319Z
+END:VCARD

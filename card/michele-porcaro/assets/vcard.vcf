@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Michele Porcaro
+N;CHARSET=UTF-8:Porcaro;Michele;;;
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:prismabari1@gmail.com
+TEL;TYPE=CELL:+393772273996
+LABEL;CHARSET=UTF-8;TYPE=WORK:Agente immobiliare
+ADR;CHARSET=UTF-8;TYPE=WORK:;;via Ottavio Serena 20;Bari;BA;70126;Italy
+ROLE;CHARSET=UTF-8:Agente immobiliare
+ORG;CHARSET=UTF-8:Prisma Soluzioni Immobiliari
+URL;type=WORK;CHARSET=UTF-8:https://www.soluzioniprisma.it/
+REV:2024-05-30T09:32:50.319Z
+END:VCARD

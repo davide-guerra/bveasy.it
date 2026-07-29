@@ -137,11 +137,10 @@
         div#image {
             display: flex;
             justify-content: flex-start;
+            align-items: center;
         }
         div#image img {
             width: 100%;
-            aspect-ratio: 3 / 4;
-            /* object-fit: cover; */
             border-radius: 20px;
         }
         @media screen and (min-width: 1200px) {
@@ -149,7 +148,7 @@
                 flex-direction: row;
             }
             div#image {
-                display: unset;
+               /*  display: unset; */
                 flex-basis: 33%;
             }
             div#details {

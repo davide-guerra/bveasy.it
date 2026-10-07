@@ -1,13 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
-FN;CHARSET=UTF-8:Domingo Positano
-N;CHARSET=UTF-8:Positano;Domingo;;;
+FN;CHARSET=UTF-8:Gospel Singers
+N;CHARSET=UTF-8:Singers;Gospel;;;
 EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:domenico@bveasy.it
-TEL;TYPE=CELL:+393406952989
-LABEL;CHARSET=UTF-8;TYPE=WORK:BvEasy
-ADR;CHARSET=UTF-8;TYPE=WORK:;;via Aldo Moro 1;Rutigliano;BA;70018;Italy
-ROLE;CHARSET=UTF-8:Web designer
-ORG;CHARSET=UTF-8:BvEasy
-URL;type=WORK;CHARSET=UTF-8:https://bveasy.it
+TEL;TYPE=CELL:+393475145251
+LABEL;CHARSET=UTF-8;TYPE=WORK:Musica e Arte Project
+ORG;CHARSET=UTF-8:Musica e Arte Project
+URL;type=WORK;CHARSET=UTF-8:https://open.spotify.com/intl-it/artist/7FmcO7f1G8QSJiXoxuTIca?si=V9baa-ugR_2iXAgDjyhppA
 REV:2024-05-30T09:32:50.319Z
 END:VCARD

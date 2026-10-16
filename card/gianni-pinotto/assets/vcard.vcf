@@ -1,7 +1,7 @@
 BEGIN:VCARD
 VERSION:3.0
-FN;CHARSET=UTF-8:Gianni Pinotto
-N;CHARSET=UTF-8:Pinotto;Gianni;;;
+FN;CHARSET=UTF-8:Mario Rossi
+N;CHARSET=UTF-8:Rossi;Mario;;;
 ORG;CHARSET=UTF-8:Positano spa
 TITLE;CHARSET=UTF-8:Coglionazzo
 ROLE;CHARSET=UTF-8:Coglionazzo
@@ -9,5 +9,5 @@ EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:gianni@mailinator.ml
 TEL;TYPE=CELL:+393331122333
 X-SOCIALPROFILE;type=facebook:https://fb.com/positano
 URL;type=BVeasy:https://bveasy.it/card/gianni-pinotto/
-REV:2026-10-15T15:32:01Z
+REV:2026-10-16T08:05:01Z
 END:VCARD

@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Giuseppe Antonacci
+N;CHARSET=UTF-8:Antonacci;Giuseppe;;;
+ORG;CHARSET=UTF-8:CleverX
+TITLE;CHARSET=UTF-8:PhD
+ROLE;CHARSET=UTF-8:PhD
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:g.antonacci@cleverx.it
+TEL;TYPE=CELL:+393477322187
+ADR;CHARSET=UTF-8;TYPE=WORK:;;Via Trieste 17;Noicattaro;BA;70016;Italia
+URL;type=WORK;CHARSET=UTF-8:https://www.cleverx.it
+X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/giuseppe-antonacc
+ i-phd-36a3b646/
+URL;type=BVeasy:https://bveasy.it/card/cleverx/
+NOTE;CHARSET=UTF-8:Managing Partner - Innovation & AI
+REV:2026-11-02T11:12:01Z
+END:VCARD
